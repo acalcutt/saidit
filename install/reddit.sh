@@ -74,11 +74,11 @@ fi
 # if you try and use this install script on another release you're gonna
 # have a bad time.
 source /etc/lsb-release
-if [ "$DISTRIB_ID" != "Ubuntu" -o "$DISTRIB_RELEASE" != "14.04" ]; then
-    echo "ERROR: Only Ubuntu 14.04 is supported."
-    exit 1
-fi
-
+#if [ "$DISTRIB_ID" != "Ubuntu" -o "$DISTRIB_RELEASE" != "14.04" ]; then
+#    echo "ERROR: Only Ubuntu 14.04 is supported."
+#    exit 1
+#fi
+#
 if [[ "2000000" -gt $(awk '/MemTotal/{print $2}' /proc/meminfo) ]]; then
     LOW_MEM_PROMPT="reddit requires at least 2GB of memory to work properly, continue anyway? [y/n] "
     read -er -n1 -p "$LOW_MEM_PROMPT" response
